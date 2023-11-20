@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Product_Galimov">
+    <Position X="6.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABgAAAAAAAAAAAAAAAAAAAICAEAAAgAAAAAAAAADA=</HashCode>
+      <FileName>Product_Galimov.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Discount_product_Galimov">
+    <Position X="9.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAACAAAACAAAAAAAIAADA=</HashCode>
+      <FileName>Discount_product_Galimov.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Store">
+    <Position X="2" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAgAAAAAAAAAAQAAAAAQAAQAAAAAEAAAABAA=</HashCode>
+      <FileName>Store_Galimov.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
