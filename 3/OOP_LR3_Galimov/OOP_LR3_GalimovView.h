@@ -38,6 +38,8 @@ protected:
 // Generated message map functions
 protected:
 	DECLARE_MESSAGE_MAP()
+public:
+	afx_msg void OnEditMenu();
 };
 
 #ifndef _DEBUG  // debug version in OOP_LR3_GalimovView.cpp

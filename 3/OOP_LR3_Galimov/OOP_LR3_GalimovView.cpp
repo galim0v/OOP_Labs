@@ -4,6 +4,7 @@
 
 #include "pch.h"
 #include "framework.h"
+//#include "Store_Galimov.h"
 // SHARED_HANDLERS can be defined in an ATL project implementing preview, thumbnail
 // and search filter handlers and allows sharing of document code with that project.
 #ifndef SHARED_HANDLERS
@@ -47,14 +48,20 @@ BOOL COOPLR3GalimovView::PreCreateWindow(CREATESTRUCT& cs)
 
 // COOPLR3GalimovView drawing
 
-void COOPLR3GalimovView::OnDraw(CDC* /*pDC*/)
+void COOPLR3GalimovView::OnDraw(CDC* pDC)
 {
 	COOPLR3GalimovDoc* pDoc = GetDocument();
 	ASSERT_VALID(pDoc);
 	if (!pDoc)
 		return;
+	CPen pen(PS_SOLID, 3, RGB(0, 0, 128));
+	CPen* pOldpen = pDC->SelectObject(&pen);
 
-	// TODO: add draw code for native data here
+	CSize sizeTotal = pDoc->st.DrawTable(pDC);
+	SetScrollSizes(MM_TEXT, sizeTotal); //логический размер и режим сопоставления координат для прокрутки вида
+
+	pDC->SelectObject(&pOldpen);
+
 }
 
 void COOPLR3GalimovView::OnInitialUpdate()
@@ -79,6 +86,11 @@ void COOPLR3GalimovView::AssertValid() const
 void COOPLR3GalimovView::Dump(CDumpContext& dc) const
 {
 	CScrollView::Dump(dc);
+}
+
+void COOPLR3GalimovView::OnEditMenu()
+{
+	Invalidate();
 }
 
 COOPLR3GalimovDoc* COOPLR3GalimovView::GetDocument() const // non-debug version is inline

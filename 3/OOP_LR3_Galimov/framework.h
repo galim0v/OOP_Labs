@@ -27,13 +27,15 @@
 
 #include <afxcontrolbars.h>     // MFC support for ribbons and control bars
 
-
-
-
-
-
-
-
+#include <vector>
+#include <fstream>
+#include <algorithm>
+#include <functional>
+#include <atlstr.h>
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
 
 #ifdef _UNICODE
 #if defined _M_IX86

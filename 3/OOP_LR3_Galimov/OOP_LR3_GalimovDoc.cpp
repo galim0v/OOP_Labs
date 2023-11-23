@@ -60,13 +60,13 @@ void COOPLR3GalimovDoc::Serialize(CArchive& ar)
 	//перед загрузкой функцию очистки тк OnNewDocument не вызывается
 	if (ar.IsStoring())
 	{
-		st.OutputProducts();//for save
+		st.ToFileProducts(ar);//for save
 		// TODO: add storing code here
 	}
 	else
 	{
 		st.ClearProducts();//for load
-		st.AddProduct();
+		st.FromFileProducts(ar);
 		// TODO: add loading code here
 	}
 }
