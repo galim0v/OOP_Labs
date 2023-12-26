@@ -109,7 +109,7 @@ CSize Store::DrawTable(CDC* pDC)
 
 
 	for_each(Products_Galimov.begin(), Products_Galimov.end(), bind(&Product_Galimov::CDCDrow, placeholders::_1, pDC, aLeft, aLen, ref(top), LineHeight));
-
+	//for_each(Products_Galimov.begin(), Products_Galimov.end(), bind(&Product_Galimov::CDCDrow, placeholders::_1, pDC, aLeft, aLen, top, LineHeight));
 	POINT sizeAll;
 	sizeAll.x = aLen[5] + indent;
 	sizeAll.y = top;
