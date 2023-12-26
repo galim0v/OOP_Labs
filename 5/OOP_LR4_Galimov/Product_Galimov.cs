@@ -1,16 +1,9 @@
 ﻿using System;
-using System.Xml;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using System.Xml.Serialization;
 
 namespace OOP_LR4_Galimov
 {
     [Serializable]
-    public class Product
+    public class Product_Galimov
     {
         protected string name { get; set; }
         protected float price { get; set; }

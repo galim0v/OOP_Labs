@@ -1,30 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OOP_LR4_Galimov
 {
-    class Program
+    class Program_Galimov
     {
         static void Main()
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
-            Store store = new Store();
+            Store_Galimov store = new Store_Galimov();
             int s = 0;
 
             do
             {
                 PrintMenu();
-                s = int.Parse(Console.ReadLine());
+                while (!int.TryParse(Console.ReadLine(), out s))
+                {
+                    Console.WriteLine("Введите корректное число. Попробуйте еще раз.");
+                }
                 switch (s)
                 {
                     case 0:
                         Environment.Exit(0);
                         break;
                     case 1:
-                        Product product = new Product();
+                        Product_Galimov product = new Product_Galimov();
                         product.InputProduct();
                         store.AddProduct(product);
                         break;
@@ -38,7 +37,7 @@ namespace OOP_LR4_Galimov
                         store.ToFileProducts();
                         break;
                     case 5:
-                        DiscountProduct discountProduct = new DiscountProduct();
+                        DiscountProduct_Galimov discountProduct = new DiscountProduct_Galimov();
                         discountProduct.InputProduct();
                         store.AddProduct(discountProduct);
                         break;

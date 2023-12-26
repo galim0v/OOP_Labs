@@ -1,21 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Serialization;
 
 namespace OOP_LR4_Galimov
 {
-   
     [Serializable]
-    public class DiscountProduct : Product
+    public class DiscountProduct_Galimov : Product_Galimov
     {
         private int discount;
         private int quantity;
 
-        public DiscountProduct() { }
+        public DiscountProduct_Galimov() { }
 
         public override void InputProduct()
         {
